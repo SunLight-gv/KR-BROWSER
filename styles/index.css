@@ -145,7 +145,7 @@ body.light-theme .hero h2 { text-shadow: none; }
 .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 16px 44px rgba(124, 58, 237, 0.18); }
 .btn-ghost { background: transparent; border: 1px solid var(--glass-border); color: var(--text); }
 .btn-full { width: 100%; padding: 12px; }
-button:disabled { opacity: 0.5; cursor: not-allowed; }
+button:disabled, a[disabled] { opacity: 0.5; cursor: not-allowed; }
 :focus-visible { outline: 3px solid rgba(124, 58, 237, 0.24); outline-offset: 3px; border-radius: 8px; }
 
 
@@ -286,25 +286,4 @@ body.light-theme .progress-bar-container { background: rgba(0,0,0,0.1); }
   0% { transform: translateY(4px); }
   50% { transform: translateY(-4px); }
   100% { transform: translateY(4px); }
-}
-
-@media (max-width: 980px) {
-  .hero { flex-direction: column; align-items: stretch; padding: 22px; }
-  .hero-right { width: 100%; }
-  .hero h2 { font-size: 1.6rem; }
-  .container { padding: 18px; }
-  .header { width: calc(100% - 36px); }
-}
-
-@media (max-width: 640px) {
-  .nav { display: none; }
-  .hero { padding: 14px; }
-  .hero h2 { font-size: 1.35rem; }
-}
-
-@media (max-width: 420px) {
-  .logo { width: 48px; height: 48px; font-size: 0.98rem; }
-  .brand h1 { font-size: 0.95rem; }
-  .hero p { font-size: 0.92rem; }
-  .badge { font-size: 0.8rem; }
 }
