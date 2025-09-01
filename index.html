@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>KR Browser — Главная</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script defer src="https://unpkg.com/lucide@0.395.0/dist/umd/lucide.min.js"></script>
+<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="styles/mobile.css">
+</head>
+<body>
+  <div class="container" id="app-container">
+    <header class="header" role="banner" aria-label="Главная навигация">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">KR</div>
+        <div>
+          <h1>KR Browser</h1>
+          <div class="kv">Анонимность • Приватность • Простота</div>
+        </div>
+      </div>
+
+      <nav class="nav" role="navigation" aria-label="Навигация по сайту">
+        <a href="#features">Преимущества</a>
+        <a href="#releases">Релизы</a>
+        <a href="#news">Новости</a>
+      </nav>
+      
+      <button id="theme-switcher" class="btn" title="Переключить тему" aria-label="Переключить тему">
+          <i data-lucide="sun"></i>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" role="region" aria-label="Презентация">
+        <div class="hero-left">
+          <h2>KR Browser официально запущен!</h2>
+          <p>Ваш путь к безопасному и анонимному интернету начинается здесь. Скачайте версию 3.0.0 и ощутите настоящую свободу.</p>
+          <div class="hero-cta">
+            <button class="btn btn-primary" id="main-download">Скачать KR Browser</button>
+            <button class="btn btn-ghost" id="open-extensions">Открыть менеджер</button>
+          </div>
+          <div style="margin-top:16px" class="inline-row">
+            <div class="badge" id="release-badge"></div>
+            <div class="kv" id="release-date"></div>
+          </div>
+        </div>
+
+        <aside class="hero-right">
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="shield-check"></i></div>
+            <div class="feature-text"><h4>Tor Интеграция</h4><p>Максимальная анонимность в сети</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="network"></i></div>
+            <div class="feature-text"><h4>Мосты obfs4/meek</h4><p>Обход блокировок и цензуры</p></div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i data-lucide="sun-moon"></i></div>
+            <div class="feature-text"><h4>Светлая тема (скоро)</h4><p>Новый дизайн скоро появится в браузере</p></div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features" class="section reveal">
+        <h3>Почему KR Browser?</h3>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-card-icon"><i data-lucide="shield-off"></i></div>
+                <h4>Блокировка рекламы и трекеров</h4>
+                <p>Встроенный блокировщик избавляет от навязчивой рекламы и защищает от сбора данных.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon"><i data-lucide="zap"></i></div>
+                <h4>Высокая скорость</h4>
+                <p>Оптимизация кода и блокировка лишних скриптов обеспечивают быструю загрузку страниц.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-card-icon"><i data-lucide="puzzle"></i></div>
+                <h4>Безопасные расширения</h4>
+                <p>Устанавливайте дополнения из проверенного каталога в изолированной среде.</p>
+            </div>
+        </div>
+      </section>
+
+      <section id="releases" class="section">
+        <h3>История версий</h3>
+        <div class="releases reveal" id="releases-list" tabindex="0" aria-label="Карусель релизов">
+        </div>
+      </section>
+
+      <section id="news" class="section">
+        <h3>Новости и обновления</h3>
+        <div class="news-grid reveal" id="news-grid">
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">© KR Labs — KR Browser • Приватность прежде всего</footer>
+  </div>
+
+  <div id="modal" class="modal-overlay"></div>
+
+<script src="js/index.js"></script>
+</body>
+</html>

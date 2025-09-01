@@ -1,0 +1,64 @@
+/* Адаптация для планшетов и мобильных устройств */
+@media (max-width: 980px) {
+  .hero { 
+    flex-direction: column; 
+    align-items: stretch; 
+    padding: 22px; 
+  }
+  .hero-right { 
+    width: 100%; 
+  }
+  .hero h2 { 
+    font-size: 1.6rem; 
+  }
+  .container { 
+    padding: 18px; 
+    min-height: calc(100vh - 36px);
+  }
+  .header { 
+    width: calc(100% - 36px); 
+  }
+}
+
+/* Адаптация для мобильных устройств (скрываем навигацию) */
+@media (max-width: 768px) {
+  .nav { 
+    display: none; 
+  }
+  .hero { 
+    padding: 14px; 
+  }
+  .hero h2 { 
+    font-size: 1.35rem; 
+  }
+}
+
+/* Адаптация для маленьких мобильных устройств */
+@media (max-width: 420px) {
+  .logo { 
+    width: 48px; 
+    height: 48px; 
+    font-size: 0.98rem; 
+  }
+  .brand h1 { 
+    font-size: 0.95rem; 
+  }
+  .hero p { 
+    font-size: 0.92rem; 
+  }
+  .badge { 
+    font-size: 0.8rem; 
+  }
+  .container {
+    padding: 12px;
+    min-height: calc(100vh - 24px);
+  }
+  .header {
+    padding: 8px 12px;
+    width: calc(100% - 24px);
+  }
+  .hero-cta {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
